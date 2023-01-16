@@ -2,6 +2,17 @@
 NGINX JavaScript examples
 =========================
 
+Beispielaufruf mit JWT auslesen
+```
+docker run -it --rm --name njs_example  -v $(pwd)/conf/http/authorization/jwt.conf:/etc/nginx/nginx.conf:ro -v $(pwd)/njs/:/etc/nginx/njs/:ro -p 80:80 -p 443:443  nginx
+```
+
+```
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkJhZWxkdW5nIFVzZXIiLCJpYXQiOjE1MTYyMzkwMjJ9.qH7Zj_m3kY69kxhaQXTa-ivIpytKXXjZc1ZSmapZnGE" http://localhost:80/jwt
+```
+
+
+
 .. contents::
    :depth: 3
 
