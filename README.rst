@@ -4,7 +4,7 @@ NGINX JavaScript examples
 
 Beispielaufruf mit JWT auslesen
 ```
-docker run -it --rm --name njs_example  -v $(pwd)/conf/http/authorization/jwt.conf:/etc/nginx/nginx.conf:ro -v $(pwd)/njs/:/etc/nginx/njs/:ro -p 80:80 -p 443:443  nginx
+docker run -it --rm --name njs_example  -v $(pwd)/conf/http/authorization/jwt.conf:/etc/nginx/nginx.conf:ro -v $(pwd)/njs/:/etc/nginx/njs/:ro -p 80:80 -p 443:443 nginxinc/nginx-unprivileged:1.25
 ```
 
 ```
